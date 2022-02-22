@@ -65,6 +65,7 @@ function stateReduser(state, action) {
 					value: '',
 				},
 			}
+		
 
 		default:
 			break
@@ -86,28 +87,14 @@ const Login = () => {
 
 	const submitUserInfoHandler = (event) => {
 		event.preventDefault()
-		const userInfo = {
-			name: state.userName.value,
-			email: state.userEmail.value,
-			password: state.userPassword.value,
-			id: Math.random().toString(),
+		const submit = {
+			userName: state.userName.value,
+			userEmail: state.userEmail.value,
+			userPassword: state.userPassword.value,
 		}
-		dispatchState({ type: 'CLEAR' })
-		console.log(userInfo)
-
-		async function addUserInfo() {
-			const response = await fetch(BASE_URL, {
-				method: 'POST',
-				body: JSON.stringify(userInfo),
-				headers: {
-					'Content-type': 'application/json',
-				},
-			})
-			const data = await response.json()
-			console.log(data)
-		}
-
-		addUserInfo()
+		dispatchState({type:'CLEAR'})
+		console.log(submit)
+	
 	}
 
 	return (
