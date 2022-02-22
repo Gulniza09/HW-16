@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://react-post-userinfo-default-rtdb.firebaseio.com/users.json'

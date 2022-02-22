@@ -1,0 +1,11 @@
+.button:disabled {
+	color: antiquewhite;
+}
+.button {
+	padding: 1em;
+	background: rgb(241, 207, 163);
+	color: hsl(0 0 100);
+	border: none;
+	border-radius: 30px;
+	font-weight: 600;
+}
